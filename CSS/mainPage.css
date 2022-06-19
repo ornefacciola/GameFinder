@@ -1,0 +1,452 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anek+Odia:wght@100;300&family=Beau+Rivage&family=Bebas+Neue&family=Charis+SIL&family=Exo:wght@200;300;400;700;800&family=Lobster&family=Maven+Pro&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Serif:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@200&family=Raleway&family=Rubik:ital,wght@1,300&family=Shadows+Into+Light&family=Source+Serif+Pro:ital@1&family=Water+Brush&display=swap');
+:root{
+    --green1: #5FE19B;
+    --green2: #36B972;
+    --green3: #0EA152;
+    --white: #fff;
+    --black: #151515;
+    --cardcolor: #303030;
+    --grey: #939393;
+    --greyfont: #515151;
+    --whitebg: #F0F0F0;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--black);
+}
+
+.navbar{
+    display: flex;
+    justify-content:space-between; /*main axis*/
+    align-items: center; /*cross axis*/
+    flex-direction:row;
+    background: linear-gradient(var(--green1), var(--green2), var(--green3));
+    margin:0;
+    padding:0;
+    height:90px;
+}
+
+/*Searchbar*/
+form{
+    width: 362px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 4px;
+    
+}
+#query{
+    width:100%;
+    height:100%;
+    border-radius: 4px;
+    border:none;
+    resize:none;
+    outline:none;
+
+}
+form ::placeholder{
+    font-family: 'Exo';
+}
+
+.vector{
+    margin-left: 5px;
+}
+/*logo game finder*/
+.logo{
+    height: 35px;
+    width:250px;
+    margin-left: 45px;
+}
+/*Avatar y logout*/
+.logout{
+    display:flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-around;
+    margin-right: 40px;
+
+}
+.textlogout{
+    font-family: 'Exo';
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    margin-top: 15px;
+}
+/*Text under the navbar*/
+.topbar{
+    width: 95vw;
+    display:grid;
+    grid-template-columns: 3fr .46fr;
+    margin-left: 42px;
+    background-color: var(--black);
+}
+.title{
+    font-family: 'Exo';
+    font-weight: 800;
+    font-size: 2.5em;
+    color: var(--white)
+}
+.textunder{
+    color: var(--white);
+    font-family: 'Exo';
+    margin-top: -10px;
+}
+.mode{
+    display: grid;
+    grid-template-columns: 80px 10px;
+    margin-right: 67px;
+    align-items: center;
+    grid-gap: 20px;
+}
+.color-mode{
+    font-family: 'Exo';
+    color: var(--white);
+    font-size: 1em;
+}
+.switch{
+    height:60px;
+    width: 60px;
+}
+.toggle {
+    position: relative;
+    display: inline-block;
+    width : 60px;
+    height : 35px;
+    background-color: #5F81FB;
+    border-radius: 30px;
+}
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--white);
+    top: 5px;
+    left: 30px;
+    transition:  all 0.5s;
+}
+.checkbox:checked + .toggle::after {
+    left : 4px;
+}
+.checkbox:checked + .toggle {
+    background-color: var(--grey);
+}
+.checkbox {
+    display : none;
+}
+.onoff{
+    font-family: 'Exo';
+    font-size: 11px;
+    margin-left: 12px;
+    margin-top: 10px;
+    color: var(--white);
+}
+
+.someIcon{
+    display: grid;
+    grid-template-columns: 10px 20px;
+    grid-gap: 60px;
+    position: relative;
+    margin-left: 40px; 
+}
+
+.imgbg{
+    height:50px;
+    width: 50px;
+    background-color: #515151;
+    border-radius: 10px;
+}
+.imgbg1{
+    height:50px;
+    width: 50px;
+    background-color: #30303067;
+    border-radius: 10px;
+}
+.imgbgextra{
+    height:50px;
+    width: 50px;
+    background-color: #30303067;
+    border-radius: 10px;
+}
+.imgbg1extra{
+    height:50px;
+    width: 50px;
+    background-color: #515151;
+    border-radius: 10px;
+}
+.switch1 {
+    width: 25px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 12.5px;
+}
+.switch2 {
+    width: 25px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 12.5px;
+}
+.light-mode{
+    background-color: var(--whitebg);
+    color: var(--greyfont);
+}
+.light-mode1{
+    background-color: var(--whitebg);
+    color: #939393;
+}
+.name-mode{
+    color: var(--greyfont) !important;
+}
+
+
+
+/*Where the sidebar and games are*/
+.games{
+    display: flex;
+
+}
+.sidebar{
+    width: 15%;
+    text-align: center;
+    margin-left: 42px;
+}
+.texts{
+    color: var(--white);
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    font-family: 'Exo';
+    font-weight: 800;
+    line-height: 40px;
+    font-size: 1.2em;
+}
+.text-item{
+    margin-left: 10px;
+}
+.time{
+    color: var(--white);
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    font-family: 'Exo';
+    font-size: 1em;
+    margin-left: 12px;
+    margin-top: 25px;
+    line-height: 10px;
+    
+}
+.time-item{
+    color: var(--white);
+    flex-direction: row;
+    display:flex;
+    align-items: center ;
+
+}
+.icon{
+    height: 20px;
+}
+.popular{
+    color: var(--white);
+    text-align: left;
+    font-family: 'Exo';
+    font-size: 1em;
+    position:relative;
+    margin-left: 12px;
+    margin-top: 50px;
+    line-height:10px;
+}
+.popular-h{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.popular-text{
+    margin-left: 10px;
+}
+.popular-item{
+    color: var(--white);
+    flex-direction: row;
+    display:flex;
+    align-items: center ;
+}
+.icon{
+    position: relative;
+}
+
+
+/* card */
+.cards{
+    width: 78%;
+    margin-left: 0px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.cardsingle{
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+}
+.singlecard{
+    height: 300px;
+    width: 340px;
+    background-color: var(--cardcolor);
+    border-radius: 12px;
+    margin-left: 20px;
+}
+.singlecardextra{
+    height: 450px;
+    width: 698px;
+    background-color: var(--cardcolor);
+    border-radius: 12px;
+    margin-left: 20px;
+}
+.card-mode{
+    background-color: #fff;
+    color: var(--greyfont);
+}
+.bgimage{
+    height:190px;
+}
+.bgimageextra{
+    height:250px;
+}
+.heart{
+    margin-left: 305px;
+    margin-top: 1.2vw;
+}
+.heartextra{
+    margin-left: 640px;
+    margin-top: 1.5vw;
+}
+
+.info-content{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 250px 100px;
+}
+.generalinfo{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 110px 140px 100px;
+}
+.generalinfoextra{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+}
+.name{
+    font-family: 'Exo';
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.3em;
+}
+.nameextra{
+    font-family: 'Exo';
+    color: var(--white);
+    font-weight: 800;
+    font-size: 2.3em;
+}
+.id{
+    font-family: 'Exo';
+    font-weight: 700;
+    color: var(--green2);
+    margin-left: 30px;
+    font-size: 1.3em;
+}
+.idextra{
+    font-family: 'Exo';
+    font-weight: 700;
+    color: var(--green2);
+    margin-left: 365px;
+    font-size: 1.5em;
+}
+.rDate{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: 15px;
+    font-size: .8em;
+    width:90px;
+}
+.date{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: 15px;
+    margin-left: -20px;
+    font-size: .8em;
+    color: var(--white);
+}
+.dateExtra{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: 15px;
+    margin-left: -56px;
+    font-size: .8em;
+    color: var(--white);
+}
+.genretype{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: 5px;
+    font-size: .8em;
+    color: var(--white);
+    margin-left: -20px;
+}
+.genretExtra{
+    font-family: 'Exo';
+    width:50%;
+    color: var(--grey);
+    margin-top: -23px;
+    font-size: .8em;
+    color: var(--white);
+    margin-left: 110px;
+}
+.genre{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: 5px;
+    font-size: .8em; 
+}
+.genreExtra{
+    font-family: 'Exo';
+    color: var(--grey);
+    margin-top: -23px;
+    font-size: .8em;
+    margin-left: 200px;
+}
+.gamelogo{
+    width: 120px;
+    margin-top: 15px;
+    margin-left: -38px;
+}
+.gamelogoExtra{
+    width: 120px;
+    margin-top: 15px;
+    margin-left: 250px;
+}
+.logoitem1, .logoitem2, .logoitem3{
+    margin-left: 8px;
+}
+.descriptionn{
+    display: block;
+    font-family: 'Exo';
+    width:45%;
+    position: absolute;
+    font-size: .8em;
+    margin-top: 50px;
+    color: var(--white);
+}
+.description{
+    display:none;
+}

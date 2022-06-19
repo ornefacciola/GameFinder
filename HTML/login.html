@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>GameFinder Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css"/>
+    <script src="https://kit.fontawesome.com/03996167b3.js" crossorigin="anonymous"></script>
+    <script src="../Scripts/carousel.js"></script>
+    <script src="../Scripts/toggleEye.js"></script>
+    <script src="../Scripts/jwt.js"></script>
+    <script src="../Scripts/colorMode.js"></script>
+</head>
+<body>
+    <div id="nav-container">        
+        <span class="game">GAME</span><span class="finder"><strong>FINDER</strong></span>
+    </div>
+    <div class="login">
+        <h1 id="welcome">Welcome! Log in or register</h1>
+        <h2 id="welcome2">Log in to find the games you're looking for!</h2>
+        <span class="errorInForm"></span>
+        <form class="actualForm" name="form">
+            <div>
+                <input class="inputs" type="email" id="email" placeholder="Email" name="email"> 
+                <div class="error_hint hidden">Please, check your email is valid</div>
+                <div class="passicon">
+                    <input class="inputs" type="password" id="password" placeholder="Password" name="password"> 
+                    <div class="error_hint hidden">Please, check your password is valid</div>
+                    <i class="bi bi-eye-slash" id="togglePassword" onclick="togglePw()" aria-hidden="true"></i> 
+                </div>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="checkb" checked="checked">
+                <label class="rememberMe" for="check-box">Remember me</label>
+                <a class="fgt-psw" href="#">Forgot password?</a>
+            </div>
+            <div>
+                <button id="enter" type="submit">Log in</button>
+            </div>
+            <div class="container-register">
+                <p class="ntr">Not registered yet?  <a class="register" href="#">Register now</a></p> 
+            </div>
+            <div class="container-or">
+                <hr id="hr1">
+                <p class="or">or</p>
+                <hr id="hr2">
+            </div>                          
+            <div class="socialmedia">
+                <button class="btn-s"><img class="fpic" src="../Images/Vectorfacebook.svg"><a class="logsocial" href="#">Log in with Facebook</a></button>
+                <button class="btn-s"><img class="fpic" src="../Images/VectorTwitter.svg"><a class="logsocial" href="#">Log in with Twitter</a></button>
+                <button class="btn-s"><img class="fpic" src="../Images/Vectorgoogle.svg"><a class="logsocial" href="#">Log in with Google</a></button>
+            </div>
+                
+        </form>
+    </div>
+    <div class="carousel">
+        <div class="images">
+            <img class="bgimg" src="../images/img1.jpg" alt="1st bg pic">
+            <img class="bgimg" src="../images/img2.jpg" alt="2nd bg pic">
+            <img class="bgimg" src="../images/img3.jpg" alt="3rd bg pic">
+            <img class="bgimg" src="../images/img4.jpg" alt="4th bg pic">
+            <img class="bgimg" src="../images/img5.jpg" alt="5th bg pic">
+        </div>
+        <div onclick="side_slide(-1)" class="slide left">
+            <i class="fas fa-angle-left"></i>
+        </div>
+        <div onclick="side_slide(1)" class="slide right">
+            <i class='fa fa-angle-right'></i>
+        </div>
+        <div class="btn-sliders">
+            <span class="slid" onclick="btn_slide(1)"></span>
+            <span class="slid" onclick="btn_slide(2)"></span>
+            <span class="slid" onclick="btn_slide(3)"></span>
+            <span class="slid" onclick="btn_slide(4)"></span>
+            <span class="slid" onclick="btn_slide(5)" ></span>
+        </div>
+    </div>
+    <script src="../Scripts/valid.js"></script>
+</body>
+</html>

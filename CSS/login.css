@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anek+Odia:wght@100;300&family=Beau+Rivage&family=Bebas+Neue&family=Charis+SIL&family=Exo:wght@200;300;400;700;800&family=Lobster&family=Maven+Pro&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Serif:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@200&family=Raleway&family=Rubik:ital,wght@1,300&family=Shadows+Into+Light&family=Source+Serif+Pro:ital@1&family=Water+Brush&display=swap');
+:root{
+    --white: #fff;
+    --black: #000;
+    --grey: #515151;
+    --bglogin: #3030309a;
+    --checkcolor:#36B972;
+    --logincolor: #4CC986;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.body {
+    margin: 0; 
+    height:100%;
+    width:100%;
+}
+
+
+.game{
+    font-family: 'Exo', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--black);
+    font-size: 2.5em;
+    position:absolute;
+    margin-left: 50px;
+    margin-top: 15px;
+    color: var(--white)
+}
+.finder{
+    font-family: 'Exo', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--black);
+    font-size: 2.5em;
+    position:absolute;
+    margin-left: 156px;
+    margin-top: 15px;
+    color: var(--white);
+}
+
+/* Carousel */
+.carousel{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.images{
+    width:100%;
+    height:100%;
+}
+.images img{
+    height:100%;
+    width:100%;
+}
+.btn-sliders{
+    position:absolute;
+    bottom: 20px;
+    left:50%;
+    display: flex;
+    transform: translateX(-50%);
+    background-color:#313131;
+    height: 25px;
+    width: 100px;
+    border-radius: 25px;
+    opacity:50%;
+}
+.slid{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(117, 117, 117);
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 8px;
+    margin-left: 6px;
+}
+
+.slide{
+    position: absolute;
+    top: 50%;
+    margin: 15px;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: 2px solid #515151;
+    background-color: var(--grey);
+    cursor: pointer;
+    border-radius: 25px;
+    height:43px;
+    width:43px;
+    opacity:80%;
+}
+.slide span{
+    font-size: 35px;
+    color: var(--white);
+    line-height: 41px; 
+}
+
+.right{
+    right:0;
+}
+.fa-angle-left, .fa-angle-right{
+    color:white;
+    margin-left: 12px;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+/*Welcoming the user*/
+.login{
+    color: var(--white);
+    background-color: var(--bglogin); 
+    border-radius: 8px;
+    width: 462px;
+    height: 702px;
+    text-align: center;
+    align-items: center;
+    margin-top: 178px;
+    margin-left: 850px;
+    margin-bottom: 282px;
+    position: absolute;
+}
+
+#welcome{
+    padding-top:40px;
+    font-size: 20px ;
+    font-weight: 700;
+    font-family: 'Exo';
+}
+  
+#welcome2{
+    padding-top: 8px;  
+    font-size: 16px; 
+    font-weight: 500;
+    font-family: 'Exo';   
+}
+ 
+.actualForm{
+    padding-top: 32px;
+}
+
+/* Inserting data, remember me and fgt psw*/
+#email, #password{  
+    width: 362px;
+    height: 47px;
+    margin:0 auto;
+    left: 4px;  
+    border-radius: 8px; 
+    font-family: 'Exo';
+}
+.passicon{
+    margin-left: -10px;
+}
+
+.formulario .checkField{
+    border-color: red;
+}
+
+form i {
+    margin-left: -31px;
+    cursor: pointer;
+    top:29%;
+    left:85%;
+    height:50px;
+    width:50px;
+    color:green;
+}
+#password{
+    margin-top: 16px; 
+}
+
+.inputs{
+    border-top: 150px ;
+    margin-top: 11px;
+    padding-left: 16px;
+}
+
+.error_hint{
+    color:red;
+    font-family: 'Exo';
+}
+.hidden {
+    display: none;
+}
+.invalid{
+    border: 1px solid red;
+}
+.rememberMe{
+    margin-left: 12px;
+}
+.checkbox-container {
+    width: 100px;
+    height: 50px;
+    font-family: 'Exo';
+    display: flex;
+    margin-left:55px;
+    margin-top: 10px;
+    width: 85%;
+    font-weight: 400;
+}
+#checkb {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background:transparent;
+    color:rgb(236, 236, 236);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    left: 4px;
+    top: 0px;
+    border: solid white;
+    border-radius: 4px;
+    border-width: 1.8px 1.8px 1.8px 1.8px;
+}
+#checkb:checked {
+    background-image: url(../Images/Vectoractualtick.svg);
+    background-size: 18px;
+    background-color: #36B972;
+    width: 20px;
+    height: 20px;
+}
+
+.fgt-psw{
+    color: var(--colorLinks);
+    text-decoration: none;
+    font-family: "Open Sans";
+    color: #5FE19B;
+    margin-left: 78px;
+
+}
+
+/* log in button*/
+#enter{
+    width: 362px ;
+    height: 47px;
+    font-size: 18px;
+    font-weight: 700;
+    border-color: var(--logincolor);
+    background-color:var(--logincolor);
+    border-radius: 6px;
+    color: var(--white);
+
+}
+.email_error, .password_error{
+    font-family: 'Exo';
+    font-size: .8em;
+    margin-left: 30px;
+    color: rgb(177, 6, 6);
+    width: 290px;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 6, 6);
+    display: none;
+}
+
+/*Are you registered? */
+
+.register{
+    color: var(--checkcolor);
+    text-decoration: none;
+    padding-left: 5px;
+    font-family: "Open Sans";
+}
+
+
+.ntr{
+    font-family: "Open Sans";
+}
+
+.container-register{
+    font-family: "Open Sans";
+    padding-top: 30px;
+} 
+
+/* or*/
+.container-or{
+    display: flex;
+    margin-top:25px; 
+    margin-left: 50px;
+}
+.or{
+    color:#838080;
+    font-family: 'Open Sans';
+    font-size:1em;
+    margin-top:-12px;
+    margin-left: 25px;
+}
+#hr1{
+    width:35%;
+    color:#C4C4C4;
+    border:none;
+    height: 1.2px;
+    background-color:#666;
+    opacity: 1;
+    margin-left: 8px;
+}
+#hr2{
+    width:35%;
+    color:#C4C4C4;
+    border:none;
+    height: 1.2px;
+    background-color:#666;
+    opacity: 1;
+    margin-left: 25px;
+}
+
+/* Social Media*/
+.socialmedia{
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    margin-left: 12.5%;
+    margin-top: 5px;
+}
+.btn-s{
+    background-color: transparent;
+    border-color: var(--white);
+    border-radius: 5px;
+    margin-top: 25px;
+    height:38px;
+}
+.logsocial{
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Exo';
+    font-weight: 700;
+    margin-left: 15px;
+}
+.fpic{
+    margin-left: -5px;
+}
+
+@media only screen and (max-width: 1400px){
+    /*Welcoming the user*/
+    .login{
+        color: var(--white);
+        background-color: var(--bglogin); 
+        position: flex;
+        border-radius: 12px;
+        width: 350px;
+        height: 520px;
+        text-align: center;
+        align-items: center;
+        margin-top: 75px;
+        margin-left: 915px;
+        margin-bottom: 282px;
+        position: absolute;
+        z-index: 1; 
+    }
+
+    #welcome{
+        padding-top:30px;
+        font-size: 18px ;
+        font-weight: 700;
+        font-family: 'Exo';
+    }
+    
+    #welcome2{
+        padding-top: 8px;  
+        font-size: 11px; 
+        font-weight: 500;
+        font-family: 'Exo';   
+    }
+    
+    .actualForm{
+        padding-top: 25px;
+    }
+
+    /* Inserting data, remember me and fgt psw*/
+    #email, #password{  
+        width: 290px;
+        height: 40px;
+        margin:0 auto;
+        left: 4px;  
+        border-radius: 8px; 
+        font-family: 'Exo';
+    }
+
+    .formulario .checkField{
+        border-color: red;
+    }
+
+    form i {
+        cursor: pointer;
+        position:absolute;
+        top:32.5%;
+        left:88%;
+        height:50px;
+        width:50px;
+        color:green;
+    }
+    #password{
+        margin-top: 16px; 
+    }
+
+    .rememberMe{
+        margin-left: 8px;
+        margin-top: 2.5px;
+        font-size: .8em;
+    }
+    .checkbox-container {
+        width: 100px;
+        height: 50px;
+        font-family: 'Exo';
+        display: flex;
+        margin-left:35px;
+        margin-top: 10px;
+        width: 100%;
+        font-weight: 400;
+    }
+    #checkb {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background:transparent;
+        color:rgb(236, 236, 236);
+        left: 4px;
+        top: 0px;
+        border: solid white;
+        border-radius: 4px;
+        border-width: 1.8px 1.8px 1.8px 1.8px;
+    }
+    #checkb:checked {
+        background-image: url(../Images/Vectoractualtick.svg);
+        background-size: 18px;
+        background-color: #36B972;
+        width: 20px;
+        height: 20px;
+    }
+
+    .fgt-psw{
+        color: var(--colorLinks);
+        text-decoration: none;
+        font-family: "Open Sans";
+        color: #5FE19B;
+        margin-left: 65px;
+        margin-top: 2.5px;
+        font-size: .8em;
+
+
+    }
+
+    /* log in button*/
+    #enter{
+        width: 290px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        border-color: var(--logincolor);
+        background-color:var(--logincolor);
+        border-radius: 6px;
+        color: var(--white);
+
+    }
+    .email_error, .password_error{
+        font-family: 'Exo';
+        font-size: .8em;
+        margin-left: 30px;
+        color: rgb(177, 6, 6);
+        width: 290px;
+        background: rgba(255,0,0,0.1);
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgb(177, 6, 6);
+        display: none;
+    }
+
+
+    /*Are you registered? */
+
+    .register{
+        color: var(--checkcolor);
+        text-decoration: none;
+        padding-left: 5px;
+        font-family: "Open Sans";
+        font-size: 13px;
+    }
+
+
+    .ntr{
+        font-family: "Open Sans";
+        font-size: 13px;
+    }
+
+    .container-register{
+        font-family: "Open Sans";
+        padding-top: 20px;
+    } 
+
+    /* or*/
+    .container-or{
+        display: flex;
+        margin-top:25px; 
+        margin-left: 30px;
+    }
+    .or{
+        color:#838080;
+        font-family: 'Open Sans';
+        font-size:.8em;
+        margin-top:-9px;
+        margin-left: 25px;
+    }
+    #hr1{
+        width:35%;
+        color:#C4C4C4;
+        border:none;
+        height: 1px;
+        background-color:#666;
+        opacity: 1;
+        margin-left: 8px;
+    }
+    #hr2{
+        width:35%;
+        color:#C4C4C4;
+        border:none;
+        height: 1.2px;
+        background-color:#666;
+        opacity: 1;
+        margin-left: 25px;
+    }
+
+    /* Social Media*/
+    .socialmedia{
+        width: 290px;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+    .btn-s{
+        background-color: transparent;
+        border-color: var(--white);
+        border-radius: 5px;
+        margin-top: 12px;
+    }
+    .logsocial{
+        text-decoration: none;
+        color: var(--white);
+        font-family: 'Exo';
+        font-weight: 700;
+        margin-left: 15px;
+    }
+    .fpic{
+        margin-top: 3px;
+        margin-left: -5px;
+    }
+
+}
