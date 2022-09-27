@@ -1,1 +1,1 @@
-# GameFinder by Altimetrik 
+# GameFinder 
